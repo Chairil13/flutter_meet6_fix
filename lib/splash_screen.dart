@@ -28,8 +28,9 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
+        // Lottie animation
         child: Lottie.asset(
-          'assets/plane.json', // Pastikan file lottie Anda ada di folder assets
+          'assets/plane.json',
           width: 200,
           height: 200,
           fit: BoxFit.cover,

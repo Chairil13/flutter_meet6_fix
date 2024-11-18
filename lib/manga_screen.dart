@@ -48,6 +48,7 @@ class _MangaScreenState extends State<MangaScreen> {
             color: Colors.white,
             icon: const Icon(Icons.notifications_outlined),
             onPressed: () {
+              // animated snackbar
               IconSnackBar.show(context,
                   label: 'Notified', snackBarType: SnackBarType.success);
             },
@@ -59,12 +60,14 @@ class _MangaScreenState extends State<MangaScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // Lottie animation
                   Lottie.asset(
                     'assets/book.json',
                     width: 200,
                     height: 200,
                     fit: BoxFit.cover,
                   ),
+                  // Animated text kit
                   AnimatedTextKit(
                     animatedTexts: [
                       TyperAnimatedText(

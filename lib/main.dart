@@ -19,6 +19,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      // animasi splash screen
       home: SplashScreen(),
     );
   }
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
             iconTheme: const IconThemeData(color: Colors.white),
             backgroundColor: Colors.pink.shade400,
             centerTitle: true,
+            // google fonts
             title: Text(
               'Home',
               style: GoogleFonts.montserrat(
@@ -44,7 +46,7 @@ class MyApp extends StatelessWidget {
                       color: Colors.white, fontWeight: FontWeight.bold)),
             ),
           ),
-          drawer: Drawer(
+          endDrawer: Drawer(
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
@@ -83,6 +85,7 @@ class MyApp extends StatelessWidget {
                   leading: const Icon(Icons.menu_book),
                   title: const Text('Read Manga'),
                   onTap: () {
+                    // page transition
                     Navigator.push(
                         context,
                         PageTransition(
@@ -95,6 +98,7 @@ class MyApp extends StatelessWidget {
                   },
                 ),
                 ListTile(
+                  // font awesome icon
                   leading: const Icon(FontAwesomeIcons.whatsapp),
                   title: const Text('WhatsApp'),
                   onTap: () async {
@@ -144,10 +148,12 @@ class MyApp extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // animated logo
                 const AnimatedLogo(),
                 const SizedBox(
                   height: 25,
                 ),
+                // google fonts
                 Text(
                   'Chairil Ali',
                   style: GoogleFonts.montserrat(
@@ -169,6 +175,7 @@ class MyApp extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
+                  // animated text kit
                   child: AnimatedTextKit(
                     animatedTexts: [
                       TyperAnimatedText(
@@ -190,6 +197,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// animated logo new class
 class AnimatedLogo extends StatefulWidget {
   const AnimatedLogo({super.key});
 
